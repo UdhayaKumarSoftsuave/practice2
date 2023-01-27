@@ -12,4 +12,8 @@ export class ShoppingListComponent {
     new ingredient('Mango' , 5)
   ];
 
+  getEmittedIngredient(value : ingredient){
+    this.ingredients.push(value);
+  }
+
 }

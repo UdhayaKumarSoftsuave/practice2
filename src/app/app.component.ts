@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  currentHeader !: string ;
+  currentHeader : string  = 'recipe';
   
   getHeader(value : string){
     this.currentHeader = value;
