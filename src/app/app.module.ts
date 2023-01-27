@@ -11,6 +11,7 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { BasicDirective } from './CustomDirective/basic.directive';
 import { BetterHighlightDirective } from './CustomDirective/better-highlight.directive';
+import { CustomStructuralDirectiveDirective } from './CustomDirective/custom-structural-directive.directive';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BetterHighlightDirective } from './CustomDirective/better-highlight.dir
     ShoppingListComponent,
     ShoppingEditComponent,
     BasicDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    CustomStructuralDirectiveDirective
   ],
   imports: [
     BrowserModule

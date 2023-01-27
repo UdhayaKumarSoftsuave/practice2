@@ -6,6 +6,15 @@
   <p Basic-directive>Hello</p>
 
   <p [appBetterHighlight] = "'red'"  defaultColor = "blue">Hello</p>
+
+  <p *appCustomStructuralDirective = "false" >Hello</p>
+
+  <div [ngSwitch] = 10 >
+    <p *ngSwitchCase = 10>Value is 10 </p>
+    <p *ngSwitchCase = 20>Value is 20 </p>
+    <p *ngSwitchCase = 30>Value is 30 </p>
+    <p *ngSwitchDefault >Value is 1000 </p>
+  </div>
   
 </div>
 
