@@ -5,7 +5,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <h1>Recepie name</h1>
+        <h1>{{selectedItem.name}}</h1>
     </div>
 </div>
 <div class="row">
@@ -22,11 +22,16 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <p>Description</p>
+        <p>{{selectedItem.description}}</p>
     </div>
 </div>
 <div class="row">
     <div class="col-xs-12">
         <p>Ingredients</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <img src="{{selectedItem.imagepath}}" alt="{{selectedItem.name}}" class="img-responsive" style="max-height: 500px; max-width: 500px;">
     </div>
 </div>
