@@ -13,6 +13,7 @@ import { BasicDirective } from './CustomDirective/basic.directive';
 import { BetterHighlightDirective } from './CustomDirective/better-highlight.directive';
 import { CustomStructuralDirectiveDirective } from './CustomDirective/custom-structural-directive.directive';
 import { DropDownDirectiveDirective } from './CustomDirective/drop-down-directive.directive';
+import { RecipeService } from './recipes/recipes.service';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,7 @@ import { DropDownDirectiveDirective } from './CustomDirective/drop-down-directiv
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [RecipeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
