@@ -14,6 +14,7 @@ import { BetterHighlightDirective } from './CustomDirective/better-highlight.dir
 import { CustomStructuralDirectiveDirective } from './CustomDirective/custom-structural-directive.directive';
 import { DropDownDirectiveDirective } from './CustomDirective/drop-down-directive.directive';
 import { RecipeService } from './recipes/recipes.service';
+import { ShoppingService } from './shopping-list/shopping.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { RecipeService } from './recipes/recipes.service';
   imports: [
     BrowserModule
   ],
-  providers: [RecipeService],
+  providers: [RecipeService , ShoppingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
