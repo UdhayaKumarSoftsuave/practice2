@@ -16,9 +16,15 @@ ingredients : ingredient[]= [
     }
     addIngredients(ingredient : ingredient){
         this.ingredients.push(ingredient);
-        this.emitIngredients.emit(this.ingredients);
-        console.log();
-        
+        this.emitIngredients.emit(this.ingredients);  
+    }
+
+    addIngredientByArray(ingredients : ingredient[]){
+        // ingredients.forEach((element : ingredient)=> {
+        //     this.addIngredients(element);
+        // });
+        this.ingredients.push(...ingredients);
+        this.emitIngredients.emit(this.ingredients); 
     }
 
 }
