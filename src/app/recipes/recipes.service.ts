@@ -26,4 +26,8 @@ recipes : Recipe[] = [
         return this.recipes.slice();
     }
 
+    getByIndex(id : number) : Recipe{
+        return this.recipes[id];
+    }
+
 }

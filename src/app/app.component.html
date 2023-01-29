@@ -1,7 +1,6 @@
 <div class="container">
   <app-header (header) = "getHeader($event)"></app-header>
-  <app-recipes *ngIf = "currentHeader == 'recipe'"></app-recipes>
-  <app-shopping-list *ngIf = "currentHeader == 'shopping'"></app-shopping-list>
+  <router-outlet></router-outlet>
 
   <p Basic-directive>Hello</p>
 

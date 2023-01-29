@@ -15,6 +15,9 @@ import { CustomStructuralDirectiveDirective } from './CustomDirective/custom-str
 import { DropDownDirectiveDirective } from './CustomDirective/drop-down-directive.directive';
 import { RecipeService } from './recipes/recipes.service';
 import { ShoppingService } from './shopping-list/shopping.service';
+import { FormsModule } from '@angular/forms';
+import { AppRoutes } from './app.routes';
+import { NoRecipeComponent } from './no-recipe/no-recipe.component';
 
 @NgModule({
   declarations: [
@@ -29,10 +32,13 @@ import { ShoppingService } from './shopping-list/shopping.service';
     BasicDirective,
     BetterHighlightDirective,
     CustomStructuralDirectiveDirective,
-    DropDownDirectiveDirective
+    DropDownDirectiveDirective,
+    NoRecipeComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
+    AppRoutes
   ],
   providers: [RecipeService , ShoppingService],
   bootstrap: [AppComponent]
