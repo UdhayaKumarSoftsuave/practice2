@@ -14,7 +14,7 @@
             <button type="button" class="btn btn-primary dropdown-toggle"  >Manage <span class="caret"></span></button>
             <ul class="dropdown-menu">
                 <li><a  (click) = "onAddIngredients()">To shopping list</a></li>
-                <li><a  >Edit shopping</a></li>
+                <li><a [routerLink] = "['edit']" >Edit shopping</a></li>
                 <li><a  >Delete recipe</a></li>
             </ul>
         </div>

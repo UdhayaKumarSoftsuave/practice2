@@ -16,10 +16,13 @@ export class RecipeDetailComponent implements OnInit {
     private recipeService : RecipeService){}
 
   @Input() selectedItem !: Recipe;
+  id !: number;
 
   ngOnInit(): void {
+  this.id= +this.route.snapshot.params['id'];
    this.selectedItem = this.recipeService.getByIndex(+this.route.snapshot.params['id']);
    this.route.params.subscribe((param : Params) => {
+    this.id = +param['id'];
     this.selectedItem = this.recipeService.getByIndex(+param['id']);
    });
   }
