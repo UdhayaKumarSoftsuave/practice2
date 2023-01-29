@@ -18,6 +18,7 @@ import { ShoppingService } from './shopping-list/shopping.service';
 import { FormsModule } from '@angular/forms';
 import { AppRoutes } from './app.routes';
 import { NoRecipeComponent } from './no-recipe/no-recipe.component';
+import { EditRecipeComponent } from './recipes/edit-recipe/edit-recipe.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { NoRecipeComponent } from './no-recipe/no-recipe.component';
     BetterHighlightDirective,
     CustomStructuralDirectiveDirective,
     DropDownDirectiveDirective,
-    NoRecipeComponent
+    NoRecipeComponent,
+    EditRecipeComponent
   ],
   imports: [
     BrowserModule,
