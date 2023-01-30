@@ -1,4 +1,5 @@
-import { Injectable , EventEmitter } from "@angular/core";
+import { Injectable } from "@angular/core";
+import  {Subject } from "rxjs";
 import { ingredient } from "../shared/ingredient.component";
 import { Recipe } from "./recepie.model";
 
@@ -21,7 +22,7 @@ recipes : Recipe[] = [
     ])
     ];
 
-    seletedRecepie = new EventEmitter<Recipe>();
+    seletedRecepie = new Subject<Recipe>();
     getRecepies() : Recipe[]{
         return this.recipes.slice();
     }

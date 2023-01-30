@@ -1,10 +1,13 @@
 import {Injectable, EventEmitter} from '@angular/core'
+import {Subject} from 'rxjs'
 import { ingredient } from '../shared/ingredient.component';
 
 @Injectable()
 export class ShoppingService {
 
-    emitIngredients = new EventEmitter<ingredient[]>();
+    emitIngredients = new Subject<ingredient[]>();
+
+    subjects = new Subject<boolean>();
 
 ingredients : ingredient[]= [
     new ingredient('Apple' , 10),
@@ -16,7 +19,7 @@ ingredients : ingredient[]= [
     }
     addIngredients(ingredient : ingredient){
         this.ingredients.push(ingredient);
-        this.emitIngredients.emit(this.ingredients);  
+        this.emitIngredients.next(this.ingredients);  
     }
 
     addIngredientByArray(ingredients : ingredient[]){
@@ -24,7 +27,7 @@ ingredients : ingredient[]= [
         //     this.addIngredients(element);
         // });
         this.ingredients.push(...ingredients);
-        this.emitIngredients.emit(this.ingredients); 
+        this.emitIngredients.next(this.ingredients); 
     }
 
 }
