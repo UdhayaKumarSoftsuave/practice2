@@ -1,4 +1,5 @@
 import { Component ,ViewChild , ElementRef , Output , EventEmitter } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { ingredient } from 'src/app/shared/ingredient.component';
 import { ShoppingService } from '../shopping.service';
 
@@ -10,10 +11,11 @@ import { ShoppingService } from '../shopping.service';
 export class ShoppingEditComponent {
 
   @ViewChild('amount') Sinleingredient !: ElementRef;
+  @ViewChild('form') ingredientObject !: NgForm;
 
   constructor(private shoppingService : ShoppingService){}
 
-  AddIngredient(name : HTMLInputElement){
-    this.shoppingService.addIngredients(new ingredient(name.value , this.Sinleingredient.nativeElement.value));
+  onsubmit(){
+    this.shoppingService.addIngredients(this.ingredientObject.value);
   }
 }

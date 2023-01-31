@@ -10,16 +10,15 @@ import { ShoppingService } from './shopping.service';
 })
 export class ShoppingListComponent implements OnInit , OnDestroy{
 
-  
-
-
-
-
   constructor(private shoppingservive : ShoppingService){}
   ingredients !: ingredient[];
 
   subscriptoin !: Subscription;
   ngOnInit(): void {
+    this.ingredients = this.shoppingservive.getIngredients();
+    this.shoppingservive.emitIngredients.subscribe((value: any) => {
+      this.ingredients = value;
+    })
 
     this.shoppingservive.subjects.next(true);
     this.shoppingservive.subjects.subscribe((value : boolean) => console.log(value));
