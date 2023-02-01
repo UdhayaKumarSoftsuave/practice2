@@ -58,4 +58,7 @@ export class ShoppingListComponent implements OnInit , OnDestroy{
   }
 
 
+  onShoppingListClick(index : number){
+    this.shoppingservive.selectedIngredient.next(index);
+  }
 }
