@@ -93,4 +93,7 @@ export class EditRecipeComponent  implements OnInit{
     this.route.navigate(['../'] , {relativeTo  : this.active});
   }
 
+  ondeleteIngredient(i : any){
+    (this.recipeForm.get('ingredients')as FormArray).removeAt(+i);
+  }
 }
