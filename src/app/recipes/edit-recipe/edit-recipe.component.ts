@@ -89,4 +89,8 @@ export class EditRecipeComponent  implements OnInit{
     this.initRecepie();
   }
 
+  onCancel(){
+    this.route.navigate(['../'] , {relativeTo  : this.active});
+  }
+
 }
