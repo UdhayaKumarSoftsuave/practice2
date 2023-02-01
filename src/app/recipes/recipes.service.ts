@@ -6,6 +6,8 @@ import { Recipe } from "./recepie.model";
 @Injectable()
 export class RecipeService {
 
+    emitRecipe = new Subject<Recipe[]>();
+
 recipes : Recipe[] = [
     new Recipe(
         "A test A" 
@@ -29,6 +31,20 @@ recipes : Recipe[] = [
 
     getByIndex(id : number) : Recipe{
         return this.recipes[id];
+    }
+
+    addRecipes(recipe : Recipe){
+        this.recipes.push(recipe);
+        this.emitRecipe.next(this.recipes);
+    }
+
+    patchRecipe(index : number , recipe : Recipe){
+        this.recipes[index] = recipe;
+        this.emitRecipe.next(this.recipes);
+    }
+    deleteRecipe(id : number){
+        this.recipes.splice(id , 1);
+        this.emitRecipe.next(this.recipes);
     }
 
 }
